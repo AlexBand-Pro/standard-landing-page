@@ -10,18 +10,19 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  background: black;
+body, button, a {
   font-family: "Exo 2", sans-serif;
   color: rgb(255, 222, 255);
 }
 
-button {
-  font-family: "Exo 2", sans-serif;
+body {
+  margin: 0;
+  background: black;
+}
+
+button, a, .to-the-top-link {
   cursor: pointer;
   z-index: 11;
-  color: rgb(255, 222, 255);
 }
 
 canvas {
@@ -32,6 +33,10 @@ canvas {
   height: 100%;
   z-index: 10;
   overflow: hidden;
+}
+
+section, .to-the-top-link {
+  z-index: 11;
 }
 
 section {
@@ -68,13 +73,7 @@ blockquote {
   right: 4%;
   padding: 0.6em;
   border-radius: 50%;
-  z-index: 11;
   background-color: #56007a;
-  box-shadow: 0 0 10px rgb(143, 0, 204);
-  cursor: pointer;
-  /* transition: all 0.2s;
-  opacity: 0;
-  transform: translateX(100px); */
 }
 
 .rocket-icon {
@@ -83,11 +82,33 @@ blockquote {
 
 a {
   text-decoration: none;
-  color: unset;
-  font-family: "Exo 2", sans-serif;
-  cursor: pointer;
-  z-index: 11;
-  color: rgb(255, 222, 255);
+}
+
+/* Shadows */ 
+.to-the-top-link {
+  box-shadow: 0 0 10px rgb(143, 0, 204);
+}
+
+.get-started-btn, .get-started-btn:hover {
+  box-shadow: 0 0 2px rgb(143, 0, 204);
+  text-shadow: 0 0 2px rgb(143, 0, 204);
+}
+
+
+/* Shared Styles in Sections */
+.features-section, .features, .testimonials-section, .testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.hero-text, .final-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* Hero */
@@ -101,12 +122,7 @@ a {
 }
 
 .hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 2em;
-  text-align: center;
   max-width: 1200px;
   width: 100%;
 }
@@ -129,69 +145,39 @@ a {
   border: none;
   padding: 0.5em 1em;
   border-radius: 10em;
-  box-shadow: 0 0 2px rgb(143, 0, 204);
-  text-shadow: 0 0 2px rgb(143, 0, 204);
-  cursor: pointer;
   animation: pulse 1s ease-in-out infinite alternate;
   animation-fill-mode: both;
 }
 
-.get-started-btn:hover {
-  box-shadow: 0 0 20px rgb(143, 0, 204);
-  text-shadow: 0 0 20px rgb(143, 0, 204);
-}
-
-/* features */
+/* Features Section */
 
 .features-section {
   background-color: #000000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2em;
 }
 
-.features {
+.feature-title, .feature {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2em;
-}
-
-.feature-title {
-  display: flex;
-  align-items: center;
   gap: 1em;
+}
+.feature-title {
+  align-items: center;
   font-size: 1.2rem;
   font-weight: 700;
 }
 
 .feature {
-  display: flex;
   flex-direction: column;
   background-color: #2d0041;
   padding: 1em;
   border-radius: 1em;
   box-shadow: 8px 8px 0 rgb(119, 23, 160);
-  gap: 1em;
 }
 
 /* Testimonials Section */
 
 .testimonials-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2em;
   background: #000000;
   background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 60%, rgba(67, 0, 112, 1) 100%);
-}
-
-.testimonials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2em;
 }
 
 .testimonial {
@@ -213,16 +199,9 @@ a {
 /* Last Section */
 
 .final-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 2.5em;
   background: #000000;
   background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(67, 0, 112, 1) 100%);
-  text-align: center;
-  animation: background-change 1s ease-in-out infinite alternate;
-  animation-fill-mode: both;
 }
 
 .final-section > h2 {
@@ -242,5 +221,16 @@ a {
   100% {
     box-shadow: 0 0 20px rgb(143, 0, 204);
     text-shadow: 0 0 20px rgb(143, 0, 204);
+  }
+}
+
+
+@media (min-width: 425px) {
+  .features-section {
+    gap: 3em;
+  }
+
+  .features {
+    gap: 3em;
   }
 }
