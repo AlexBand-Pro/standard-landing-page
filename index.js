@@ -48,8 +48,6 @@ function createShootingStar() {
     size: Math.random() * 1 + 0.5,
     opacity: 0.8,
   });
-
-  console.log("shooting");
 }
 
 setInterval(createShootingStar, 10000);
@@ -117,6 +115,71 @@ function resizeCanvas() {
     });
   }
 }
+
+// Intersection Observer 
+
+const callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const el = entry.target
+      el.classList.add("visible")
+
+      // if (entry.IntersectionRation >= 0.9) {
+      //   if (el.id === "quote-1") {
+      //     console.log(el)
+      //     el.classList.add("visible")
+      //   }
+      // }
+    }
+  });
+};
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: [0.1, 0.9],
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+const targets = document.querySelectorAll("blockquote");
+
+targets.forEach(target => {
+  observer.observe(target);
+})
+
+
+// Sections Observer
+
+// const sectionCallback = (entries, observer) => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       const el = entry.target;
+//       console.log(entry.intersectionRatio, el)
+//       if (el.id === "features-section" && el.id === "hero-section") {
+//         document.getElementById("to-the-top-link").classList.remove("visible")
+//       } else if (el.id === "testimonials-section" || el.id === "final-section") {
+//         document.getElementById("to-the-top-link").classList.add("visible")
+//       }
+//     }
+//   });
+// };
+
+// const sectionsOptions = {
+//   root: null,
+//   rootMargin: "0px 0px -100px 0px",
+//   threshold: [0, 0.9],
+// };
+
+// const sectionObserver = new IntersectionObserver(sectionCallback, sectionsOptions);
+
+// const sections = document.querySelectorAll("section");
+
+// sections.forEach(section => {
+//   sectionObserver.observe(section);
+// });
+
+
 
 window.addEventListener('resize', resizeCanvas);
 

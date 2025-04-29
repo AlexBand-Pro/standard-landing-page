@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: black;
@@ -53,6 +57,37 @@ h2 {
 blockquote {
   font-style: italic;
   line-height: 1.7;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s;
+}
+
+.to-the-top-link {
+  position: fixed;
+  top: 3%;
+  right: 4%;
+  padding: 0.6em;
+  border-radius: 50%;
+  z-index: 11;
+  background-color: #56007a;
+  box-shadow: 0 0 10px rgb(143, 0, 204);
+  cursor: pointer;
+  /* transition: all 0.2s;
+  opacity: 0;
+  transform: translateX(100px); */
+}
+
+.rocket-icon {
+  width: 35px;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  z-index: 11;
+  color: rgb(255, 222, 255);
 }
 
 /* Hero */
@@ -192,6 +227,13 @@ blockquote {
 
 .final-section > h2 {
   font-size: 2rem;
+}
+
+/* Utility */
+
+.visible {
+  transform: translate(0);
+  opacity: 1;
 }
 
 /* Keyframes */
