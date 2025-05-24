@@ -2,6 +2,68 @@ AOS.init({
   once: true
 });
 
+gsap.registerPlugin(ScrollTrigger) 
+
+const tween = gsap.to("li", {
+  duration: 0.4,
+  y: 0,
+  ease: "power1.out",
+  paused: true,
+});
+
+const menuButtonTween = gsap.to(".burger-menu", {
+  duration: 0.2,
+  rotation: 180,
+  ease: "power1.out",
+  paused: true,
+})
+
+const bgImgTween = gsap.to(".logo", {
+  duration: 0.4,
+  backgroundPosition: "75px 50%",
+  ease: "power1.out",
+  paused: true,
+})
+
+const ultween = gsap.to(".nav-list", {
+  duration: 0.4,
+  height: 251,
+  ease: "power1.out",
+  paused: true,
+})
+
+let clicked = false;
+
+document.querySelector(".menu-btn").addEventListener("click", () => {
+  if (clicked) {
+    tween.reverse();
+    menuButtonTween.reverse()
+    bgImgTween.reverse()
+    ultween.reverse()
+  } else {
+    tween.play();
+    menuButtonTween.play()
+    bgImgTween.play()
+    ultween.play()
+  }
+
+  clicked = !clicked;
+});
+
+const headerTL = gsap.timeline()
+
+headerTL.to("header", {
+  duration: 0.4,
+  padding: 0,
+  ease: "power1.out",
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "30% 10%",
+    end: "+=15px",
+    scrub: 0.5,
+  }
+})
+
 // Starry Sky
 
 const canvas = document.getElementById("starry-sky");
@@ -147,37 +209,6 @@ const targets = document.querySelectorAll("blockquote");
 targets.forEach(target => {
   observer.observe(target);
 })
-
-
-// Sections Observer
-
-// const sectionCallback = (entries, observer) => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       const el = entry.target;
-//       console.log(entry.intersectionRatio, el)
-//       if (el.id === "features-section" && el.id === "hero-section") {
-//         document.getElementById("to-the-top-link").classList.remove("visible")
-//       } else if (el.id === "testimonials-section" || el.id === "final-section") {
-//         document.getElementById("to-the-top-link").classList.add("visible")
-//       }
-//     }
-//   });
-// };
-
-// const sectionsOptions = {
-//   root: null,
-//   rootMargin: "0px 0px -100px 0px",
-//   threshold: [0, 0.9],
-// };
-
-// const sectionObserver = new IntersectionObserver(sectionCallback, sectionsOptions);
-
-// const sections = document.querySelectorAll("section");
-
-// sections.forEach(section => {
-//   sectionObserver.observe(section);
-// });
 
 
 
