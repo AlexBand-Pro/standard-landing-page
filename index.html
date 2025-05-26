@@ -29,35 +29,39 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- AOS CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- <a class="to-the-top-link" id="to-the-top-link" href="#hero-section">
-      <img class="rocket-icon" src="./images/rocket.png" alt="Rocket." />
-    </a> -->
     <header>
       <nav>
         <div class="menu">
-          <!-- <p>Zero Gravity Code</p> -->
           <span class="logo">
-            <!-- <img class="logo-icon" src="./icons/logo-icon.png" alt=""> -->
             <span class="logo-text">
               <span>Zero</span>
               <span>Gravity</span>
               <span>Code</span>
             </span>
           </span>
-          <button class="menu-btn">
+          <button class="menu-btn" tabindex="0">
             <img class="burger-menu" src="./icons/burger-bar.png" alt="" />
           </button>
         </div>
         <ul class="nav-list">
-          <li>Home</li>
-          <li>About Me</li>
-          <li>Services</li>
-          <li>Pricing</li>
-          <li>Contact</li>
+          <li><a class="nav-link" href="#" tabindex="-1">Home</a></li>
+          <li><a class="nav-link" href="#" tabindex="-1">About Me</a></li>
+          <li><a class="nav-link" href="#" tabindex="-1">Services</a></li>
+          <li><a class="nav-link" href="#" tabindex="-1">Pricing</a></li>
+          <li><a class="nav-link" href="#" tabindex="-1">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -65,7 +69,7 @@
       <section class="hero-section" id="hero-section">
         <canvas id="starry-sky"></canvas>
         <div class="hero-text">
-          <h1>Launch Your website Into Orbit</h1>
+          <h1>Launch Your <br> website Into Orbit</h1>
           <p>
             Custom-crafted websites, built from the ground up. No templates. No
             shortcuts. Just 100% clean code that
@@ -157,139 +161,123 @@
           </div>
         </div>
 
-        <button class="get-started-btn-light">Schedule Call</button>
+        <a class="get-started-btn-light">Schedule Call</a>
       </section>
 
       <section class="why-us-section">
-        <h2>Why work with me?</h2>
+        <div class="developer-img-container">
+          <img class="developer-img" src="./images/desc-img.jpeg" alt="" />
+        </div>
 
-        <p>
-          I build websites from scratch without using page builders. That means
-          that what I put on the page is 100% custom, doesn't rely on WordPress
-          plugins and will stay on the page for years to come.
-        </p>
+        <div class="why-us-main-content">
+          <h2 class="why-us-heading">Why work with me?</h2>
 
-        <img class="developer-img" src="./images/desc-img.jpeg" alt="" />
+          <p class="why-us-description">
+            I build websites from scratch without using page builders. That
+            means that what I put on the page is 100% custom, doesn't rely on
+            WordPress plugins and will stay on the page for years to come.
+          </p>
 
-        <div class="cards">
-          <div class="card">
-            <div class="point-heading">
-              <img class="check-icon" src="./icons/check-mark.png" alt="" />
-              <h3>Built with purpose</h3>
+          <div class="cards">
+            <div class="card">
+              <div class="point-heading">
+                <img class="check-icon" src="./icons/check-mark.png" alt="" />
+                <h3>Built with purpose</h3>
+              </div>
+              <div class="point-text">
+                <p>
+                  Every element on your site is there for a reason — to guide
+                  your visitors, build trust, and drive results. No clutter, no
+                  distractions.
+                </p>
+              </div>
             </div>
-            <div class="point-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti veniam saepe repudiandae nam quas, maiores unde ratione
-                explicabo. Ea aspernatur est obcaecati ipsum cupiditate at
-                repudiandae, dolores odio voluptatum quibusdam.
-              </p>
+
+            <div class="card">
+              <div class="point-heading">
+                <img class="check-icon" src="./icons/check-mark.png" alt="" />
+                <h3>100% Hand-coded</h3>
+              </div>
+              <div class="point-text">
+                <p>
+                  I build fully custom websites without bulky plugins. This
+                  means cleaner code, faster load times, and designs that are
+                  tailored exactly to your needs — built from scratch for
+                  performance.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="point-heading">
+                <img class="check-icon" src="./icons/check-mark.png" alt="" />
+                <h3>Ongoing support</h3>
+              </div>
+              <div class="point-text">
+                <p>
+                  I don't disappear after launch. You'll always have support if
+                  you want to make updates or need help. I'll walk you through
+                  everything and make sure you're never left guessing.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="point-heading">
+                <img class="check-icon" src="./icons/check-mark.png" alt="" />
+                <h3>Personal Touch</h3>
+              </div>
+              <div class="point-text">
+                <p>
+                  You work directly with me — no middlemen. I answer your
+                  questions, handle your updates, and make sure your site
+                  reflects exactly what you need. I'm always just one call away.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="point-heading">
+                <img class="check-icon" src="./icons/check-mark.png" alt="" />
+                <h3>100% secure</h3>
+              </div>
+              <div class="point-text">
+                <p>
+                  I use clean, simple tech stacks with minimal JavaScript and no
+                  bloat. That means fewer vulnerabilities and stronger
+                  protection for you — and your customers.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="point-heading">
+                <img class="check-icon" src="./icons/check-mark.png" alt="" />
+                <h3>Money Back Garantee</h3>
+              </div>
+              <div class="point-text">
+                <p>
+                  If I can't design what you're looking for, you'll get a full
+                  refund. No hassle, no pressure. I believe in my work and stand
+                  behind every single project I take on.
+                </p>
+              </div>
             </div>
           </div>
-
-          <div class="card">
-            <div class="point-heading">
-              <img class="check-icon" src="./icons/check-mark.png" alt="" />
-              <h3>100% Hand-coded</h3>
-            </div>
-            <div class="point-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti veniam saepe repudiandae nam quas, maiores unde ratione
-                explicabo. Ea aspernatur est obcaecati ipsum cupiditate at
-                repudiandae, dolores odio voluptatum quibusdam.
-              </p>
-            </div>
+          <div class="get-started-btn-light-holder">
+            <a class="get-started-btn-light">Call Me Today</a>
           </div>
-
-          <div class="card">
-            <div class="point-heading">
-              <img class="check-icon" src="./icons/check-mark.png" alt="" />
-              <h3>24/7 Support</h3>
-            </div>
-            <div class="point-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti veniam saepe repudiandae nam quas, maiores unde ratione
-                explicabo. Ea aspernatur est obcaecati ipsum cupiditate at
-                repudiandae, dolores odio voluptatum quibusdam.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="point-heading">
-              <img class="check-icon" src="./icons/check-mark.png" alt="" />
-              <h3>Personal Touch</h3>
-            </div>
-            <div class="point-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti veniam saepe repudiandae nam quas, maiores unde ratione
-                explicabo. Ea aspernatur est obcaecati ipsum cupiditate at
-                repudiandae, dolores odio voluptatum quibusdam.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="point-heading">
-              <img class="check-icon" src="./icons/check-mark.png" alt="" />
-              <h3>100% secure</h3>
-            </div>
-            <div class="point-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti veniam saepe repudiandae nam quas, maiores unde ratione
-                explicabo. Ea aspernatur est obcaecati ipsum cupiditate at
-                repudiandae, dolores odio voluptatum quibusdam.
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="point-heading">
-              <img class="check-icon" src="./icons/check-mark.png" alt="" />
-              <h3>Money Back Garantee</h3>
-            </div>
-            <div class="point-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deleniti veniam saepe repudiandae nam quas, maiores unde ratione
-                explicabo. Ea aspernatur est obcaecati ipsum cupiditate at
-                repudiandae, dolores odio voluptatum quibusdam.
-              </p>
-            </div>
-          </div>
-          <button class="get-started-btn-light">Schedule Call</button>
         </div>
       </section>
 
       <section class="portfolio-section">
         <h2>My work</h2>
 
-        <ul class="portfolio-projects-list">
-          <li>
-            <div>
-              <img
-                class="protfolio-project"
-                src="./images/project-1-my-site.png"
-                alt=""
-              />
-            </div>
-            <h3 class="protfolio-title">Alex Band</h3>
-            <p>
-              This is a Landing Page I built for myself. It shows off nice,
-              minimalistic design, custom animations, SEO and accessibility best
-              practices
-            </p>
-            <button class="get-started-btn-light">Visit</button>
-          </li>
-        </ul>
+        
 
         <ul class="portfolio-projects-list">
           <li>
-            <div>
+            <div class="portfolio-image-container">
               <img
                 class="protfolio-project"
                 src="./images/project-2-portfolio.png"
@@ -300,15 +288,34 @@
             <p>
               This Landing Page was built for a poetess. It features classy
               design, subtle animations. The idea was to make it look
-              sophisticated and bring more traffic to social media
+              sophisticated and bring more traffic to social media.
             </p>
-            <button class="get-started-btn-light">Visit</button>
+            <a class="get-started-btn-light">Visit</a>
           </li>
         </ul>
 
         <ul class="portfolio-projects-list">
           <li>
-            <div>
+            <div class="portfolio-image-container">
+              <img
+                class="protfolio-project"
+                src="./images/project-1-my-site.png"
+                alt=""
+              />
+            </div>
+            <h3 class="protfolio-title">Alex Band</h3>
+            <p>
+              This is a Landing Page I built for myself. It shows off nice,
+              minimalistic design, custom animations, SEO and accessibility best
+              practices and full responsiveness.
+            </p>
+            <a class="get-started-btn-light">Visit</a>
+          </li>
+        </ul>
+
+        <ul class="portfolio-projects-list">
+          <li>
+            <div class="portfolio-image-container">
               <img
                 class="protfolio-project"
                 src="./images/project-3-my-site.png"
@@ -321,7 +328,7 @@
               for fun. It features client side routing, authentication,
               responsive design and light/dark theme toggle.
             </p>
-            <button class="get-started-btn-light">Visit</button>
+            <a class="get-started-btn-light">Visit</a>
           </li>
         </ul>
       </section>
@@ -359,7 +366,7 @@
               </li>
             </ul>
             <p class="final-price">$400</p>
-            <button class="get-started-btn-light">Get Started</button>
+            <a class="get-started-btn-light">Get Started</a>
           </div>
           <div class="pricing-card">
             <h3 class="pricing-card-heading">Extras</h3>
@@ -385,12 +392,12 @@
                 <p>$200</p>
               </li>
             </ul>
-            <button class="get-started-btn-light">Get Started</button>
+            <a class="get-started-btn-light">Get Started</a>
           </div>
         </div>
       </section>
 
-      <section>
+      <section class="target-audience-section">
         <h2>Who is this for?</h2>
 
         <div class="img-holder">
@@ -476,7 +483,7 @@
         </div>
       </section>
 
-      <!-- <section class="testimonials-section" id="testimonials-section">
+      <section class="testimonials-section" id="testimonials-section">
         <h2>Testimonials</h2>
 
         <div class="testimonials">
@@ -532,7 +539,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <section class="final-section" id="final-section">
         <h2>Ready for Lift-off?</h2>
@@ -542,34 +549,64 @@
     </main>
     <footer>
       <span class="logo-footer">
-        <!-- <img class="logo-icon" src="./icons/logo-icon.png" alt=""> -->
         <span class="logo-footer-text">
           <span>Zero</span>
           <span>Gravity</span>
           <span>Code</span>
         </span>
       </span>
-      <div class="main-footer-text">
-        <h3>No fluff. Just a fast, professional site.</h3>
-        <p>No bloated tools or unnecessary extras — just what you need.</p>
-
-        <h3>Optimized for performance</h3>
-        <p>
-          Your site will load instantly and pass Core Web Vitals — exactly what
-          Google looks for.
-        </p>
-
-        <h3>It’s your site, not a rental</h3>
-        <p>
-          You own it 100%. And I’m here to help you update it whenever you need.
-        </p>
-
-        <h3>Don’t settle for bad design</h3>
-        <p>
-          Too many sites — even from big businesses — are slow, messy, or
-          outdated. But a clean, fast, modern site helps build trust and attract
-          better clients. Don’t let poor design undercut your business.
-        </p>
+      <div>
+        <div class="main-footer-text">
+          <div class="footer-links-container">
+            <h3>Quick Access</h3>
+            <div class="footer-links">
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Services</a></li>
+              </ul>
+              <ul>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-info-container">
+            <h3>Contact Information</h3>
+            <div class="footer-contact-info">
+              <ul>
+                <li>
+                  <a class="contact-link" href="">
+                    <div class="font-awesome-icon">
+                      <i class="fa-brands fa-lg fa-whatsapp"></i>
+                    </div>
+                    <p>+52 33 2804 3351</p>
+                  </a>
+                </li>
+                <li>
+                  <a class="contact-link" href="">
+                    <div class="font-awesome-icon">
+                      <i class="fa-regular fa-lg fa-envelope"></i>
+                    </div>
+                    <p>alexbanddev1996@gmail.com</p>
+                  </a>
+                </li>
+                <li>
+                  <a class="contact-link" href="">
+                    <div class="font-awesome-icon">
+                      <i class="fa-regular fa-lg fa-address-book"></i>
+                    </div>
+                    <p>Contact</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-text">
+          <p>&copy; Copyright 2025 Zero Gravity Code</p>
+        </div>
       </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -578,3 +615,22 @@
     <script src="index.js"></script>
   </body>
 </html>
+
+<!-- <h3>No fluff. Just a fast, professional site.</h3>
+<p>No bloated tools or unnecessary extras — just what you need.</p>
+
+<h3>Optimized for performance</h3>
+<p>
+  Your site will load instantly and pass Core Web Vitals — exactly what Google
+  looks for.
+</p>
+
+<h3>It's your site, not a rental</h3>
+<p>You own it 100%. And I'm here to help you update it whenever you need.</p>
+
+<h3>Don't settle for bad design</h3>
+<p>
+  Too many sites — even from big businesses — are slow, messy, or outdated. But
+  a clean, fast, modern site helps build trust and attract better clients. Don't
+  let poor design undercut your business.
+</p> -->

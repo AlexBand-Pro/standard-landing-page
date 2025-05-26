@@ -1,8 +1,8 @@
 AOS.init({
-  once: true
+  once: true,
 });
 
-gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(ScrollTrigger);
 
 const tween = gsap.to("li", {
   duration: 0.4,
@@ -11,58 +11,149 @@ const tween = gsap.to("li", {
   paused: true,
 });
 
-const menuButtonTween = gsap.to(".burger-menu", {
+const menuButtonTween = gsap.to(".menu-btn", {
   duration: 0.2,
   rotation: 180,
   ease: "power1.out",
   paused: true,
-})
+});
 
 const bgImgTween = gsap.to(".logo", {
   duration: 0.4,
   backgroundPosition: "75px 50%",
   ease: "power1.out",
   paused: true,
-})
+});
 
 const ultween = gsap.to(".nav-list", {
   duration: 0.4,
-  height: 251,
+  height: 290,
   ease: "power1.out",
   paused: true,
-})
+});
 
+const menuBtn = document.querySelector(".menu-btn");
+const navList = document.querySelector(".nav-list");
+const navLinks = document.querySelectorAll(".nav-link");
+let menuOpen = false;
 let clicked = false;
 
-document.querySelector(".menu-btn").addEventListener("click", () => {
+menuBtn.addEventListener("click", () => {
   if (clicked) {
     tween.reverse();
-    menuButtonTween.reverse()
-    bgImgTween.reverse()
-    ultween.reverse()
+    menuButtonTween.reverse();
+    bgImgTween.reverse();
+    ultween.reverse();
   } else {
     tween.play();
-    menuButtonTween.play()
-    bgImgTween.play()
-    ultween.play()
+    menuButtonTween.play();
+    bgImgTween.play();
+    ultween.play();
   }
 
   clicked = !clicked;
+  menuOpen = !menuOpen;
+
+  navLinks.forEach((link) => {
+    link.setAttribute("tabindex", menuOpen ? "0" : "-1");
+  });
+
+  if (menuOpen) {
+    trapFocus();
+  }
 });
 
-const headerTL = gsap.timeline()
+function updateTabIndexBasedOnScreenSize() {
+  const isLargeScreen = window.innerWidth >= 1024;
 
-headerTL.to("header", {
-  duration: 0.4,
-  padding: 0,
-  ease: "power1.out",
+  navLinks.forEach((link) => {
+    if (isLargeScreen) {
+      link.setAttribute("tabindex", "0");
+      if (menuOpen) {
+        navList.style.height = "unset";
+      }
+    } else {
+      link.setAttribute("tabindex", menuOpen ? "0" : "-1");
+    }
+  });
+}
+
+updateTabIndexBasedOnScreenSize();
+
+window.addEventListener("resize", updateTabIndexBasedOnScreenSize);
+
+function handleFirstTab(e) {
+  if (e.key === "Tab") {
+    document.body.classList.add("user-is-tabbing");
+    window.removeEventListener("keydown", handleFirstTab);
+    window.addEventListener("mousedown", handleMouseDownOnce);
+  }
+}
+
+function handleMouseDownOnce() {
+  document.body.classList.remove("user-is-tabbing");
+  window.removeEventListener("mousedown", handleMouseDownOnce);
+  window.addEventListener("keydown", handleFirstTab);
+}
+
+window.addEventListener("keydown", handleFirstTab);
+
+const headerTL = gsap.timeline({
   scrollTrigger: {
     trigger: ".hero-section",
     start: "30% 10%",
-    end: "+=15px",
+    end: "+=20px",
     scrub: 0.5,
-  }
-})
+  },
+});
+
+headerTL.to("header", {
+  padding: 0,
+  ease: "power1.out",
+});
+
+headerTL.to(
+  ".menu",
+  {
+    borderRadius: 0,
+    ease: "power1.out",
+  },
+  "<"
+);
+
+// Trap Focus
+
+function trapFocus() {
+  const focusableEls = [menuBtn, ...navList.querySelectorAll("a.nav-link")];
+  let firstEl = focusableEls[0];
+  let lastEl = focusableEls[focusableEls.length - 1];
+
+  document.addEventListener("keydown", function handleTab(e) {
+    if (!menuOpen) return;
+
+    if (e.key === "Tab") {
+      if (e.shiftKey) {
+        // Shift + Tab
+        if (document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        }
+      } else {
+        // Tab
+        if (document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    } else if (e.key === "Escape") {
+      // Optional: close menu with Escape
+      menuOpen = false;
+      navLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
+      navList.classList.remove("open");
+      menuBtn.focus(); // return focus to the menu button
+    }
+  });
+}
 
 // Starry Sky
 
@@ -158,7 +249,7 @@ function animate() {
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  
+
   // Clear existing stars
   stars.length = 0;
   shootingStars.length = 0;
@@ -173,18 +264,18 @@ function resizeCanvas() {
       delta: Math.random() * 0.02,
       vx: (Math.random() - 0.5) * 0.1,
       vy: (Math.random() - 0.5) * 0.1,
-      color: randomStarColor() // if you're using colored stars
+      color: randomStarColor(), // if you're using colored stars
     });
   }
 }
 
-// Intersection Observer 
+// Intersection Observer
 
 const callback = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      const el = entry.target
-      el.classList.add("visible")
+      const el = entry.target;
+      el.classList.add("visible");
 
       // if (entry.IntersectionRation >= 0.9) {
       //   if (el.id === "quote-1") {
@@ -206,13 +297,11 @@ const observer = new IntersectionObserver(callback, options);
 
 const targets = document.querySelectorAll("blockquote");
 
-targets.forEach(target => {
+targets.forEach((target) => {
   observer.observe(target);
-})
+});
 
-
-
-window.addEventListener('resize', resizeCanvas);
+window.addEventListener("resize", resizeCanvas);
 
 resizeCanvas();
 
