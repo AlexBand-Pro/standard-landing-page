@@ -53,12 +53,16 @@ menuBtn.addEventListener("click", () => {
 
   clicked = !clicked;
   menuOpen = !menuOpen;
+  console.log(menuOpen);
 
   navLinks.forEach((link) => {
     link.setAttribute("tabindex", menuOpen ? "0" : "-1");
   });
 
+  menuBtn.setAttribute("aria-expanded", menuOpen ? "true" : "false");
+
   if (menuOpen) {
+    menuBtn.setAttribute()
     trapFocus();
   }
 });
@@ -71,7 +75,15 @@ function updateTabIndexBasedOnScreenSize() {
       link.setAttribute("tabindex", "0");
       if (menuOpen) {
         navList.style.height = "unset";
+        menuOpen = true;
+        clicked = true;
+      } else {
+        document.querySelectorAll(".nav-list-item").forEach((link) => {
+          link.style = "none";
+        });
       }
+
+      console.log(menuOpen, clicked);
     } else {
       link.setAttribute("tabindex", menuOpen ? "0" : "-1");
     }

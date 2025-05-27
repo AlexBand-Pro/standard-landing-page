@@ -294,6 +294,7 @@ li {
 .hero-text {
   max-width: 1200px;
   width: 100%;
+  padding-top: 40px;
 }
 
 .hero-text > p {
@@ -840,6 +841,10 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  section:not(.hero-section) {
+    padding-top: 7em;
+  }
+
   .menu {
     border-radius: 0.8em;
     padding: 1.3em;
@@ -870,7 +875,7 @@ footer {
   }
 
   nav > ul > li {
-    transform: translateY(0);
+    transform: translate(0, 0);
     width: fit-content;
     padding: 0.5em;
   }

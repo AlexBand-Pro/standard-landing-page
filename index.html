@@ -2,28 +2,90 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Standard Landing Page</title>
+    <title>Small Business Web Developer | Zero Gravity Code</title>
     <link rel="stylesheet" href="index.css" />
 
-    <!-- Exo 2 font, 100, 200, 300, 500, 600, 800, 900-->
+    <!-- Primary -->
+    <meta name="author" content="Alex Band" />
+    <meta
+      name="title"
+      content="Small Business Web Developer | Zero Gravity Code"
+    />
+    <meta
+      name="description"
+      content="Clean, performant, and accessible websites built from scratch. Explore custom web solutions designed to elevate your online presence. I hand code websites that are accessible, fast and look great on all devices. No pagebuilder or any clunky plugins. 100% custom - 100% what you need"
+    />
+    <meta
+      name="keywords"
+      content="web developer, custom websites, clean code, responsive design, zero gravity code, alex band, web developers guadalajara, web maintenance, landing page, mobile design, site migration, front-end developer, website redesign, SEO-friendly websites, accessible websites, small business web developer, professional website design"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <meta name="msapplication-TileColor" content="#4b0082" />
+    <meta name="theme-color" content="#4b0082" />
+
+    <!-- Open Graph / Facebook -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zerogravitycode.netlify.app/" />
+    <meta
+      property="og:title"
+      content="Small Business Web Developer | Zero Gravity Code"
+    />
+    <meta
+      property="og:description"
+      content="Clean, performant, and accessible websites built from scratch. Explore custom web solutions designed to elevate your online presence. I hand code websites that are accessible, fast and look great on all devices. No pagebuilder or any clunky plugins. 100% custom - 100% what you need"
+    />
+    <meta
+      property="og:image"
+      content="https://zerogravitycode.netlify.app/images/my-site-thumbnail.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Small Business Web Developer | Zero Gravity Code"
+    />
+    <meta
+      property="twitter:description"
+      content="Clean, performant, and accessible websites built from scratch. Explore custom web solutions designed to elevate your online presence. I hand code websites that are accessible, fast and look great on all devices. No pagebuilder or any clunky plugins. 100% custom - 100% what you need"
+    />
+    <meta
+      property="twitter:image"
+      content="https://zerogravitycode.netlify.app/images/my-site-thumbnail.png"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://zerogravitycode.netlify.app/" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Preloads -->
+     <link rel="preload" as="image" href="./icons/burger-bar.png" />
+
+    <!-- Preconnect only once per origin -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Exo 2 font: only load weights you actually use (400, 600, 700) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Autowide Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Audiowide font: it only has one style (400), so no need for weight -->
     <link
       href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
       rel="stylesheet"
@@ -45,42 +107,55 @@
     <header>
       <nav>
         <div class="menu">
-          <span class="logo">
+          <a href="#" class="logo">
             <span class="logo-text">
               <span>Zero</span>
               <span>Gravity</span>
               <span>Code</span>
             </span>
-          </span>
-          <button class="menu-btn" tabindex="0">
-            <img class="burger-menu" src="./icons/burger-bar.png" alt="" />
+          </a>
+          <button class="menu-btn" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+            <img class="burger-menu" src="./icons/burger-bar.png" alt="menu" />
           </button>
         </div>
         <ul class="nav-list">
-          <li><a class="nav-link" href="#" tabindex="-1">Home</a></li>
-          <li><a class="nav-link" href="#" tabindex="-1">About Me</a></li>
-          <li><a class="nav-link" href="#" tabindex="-1">Services</a></li>
-          <li><a class="nav-link" href="#" tabindex="-1">Pricing</a></li>
-          <li><a class="nav-link" href="#" tabindex="-1">Contact</a></li>
+          <li class="nav-list-item">
+            <a class="nav-link" href="#" tabindex="-1" aria-current="page">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-link" href="#" tabindex="-1">About Me</a>
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-link" href="#" tabindex="-1">Services</a>
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-link" href="#" tabindex="-1">Pricing</a>
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-link" href="#" tabindex="-1">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="hero-section" id="hero-section">
-        <canvas id="starry-sky"></canvas>
+        <canvas id="starry-sky" aria-hidden="true"></canvas>
         <div class="hero-text">
-          <h1>Launch Your <br> website Into Orbit</h1>
+          <h1>
+            Launch Your <br />
+            website Into Orbit
+          </h1>
           <p>
             Custom-crafted websites, built from the ground up. No templates. No
             shortcuts. Just 100% clean code that
-            <span class="blue">EXCEEDS</span> your expectations.
+            <strong class="blue">EXCEEDS</strong> your expectations.
           </p>
           <a href="#final-section" class="get-started-btn">Get Started</a>
         </div>
       </section>
 
-      <section class="features-section" id="features-section">
-        <h2>
+      <section class="features-section" id="features-section" aria-labelledby="features-heading">
+        <h2 id="features-heading">
           Relax — I've got this.<br />
           You just enjoy the results
         </h2>
@@ -88,7 +163,7 @@
         <div class="features">
           <div class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." />
+              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
               <h3>Optimized Performance</h3>
             </div>
             <p>
@@ -100,7 +175,7 @@
 
           <div class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." />
+              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
               <h3>Mobile First Design</h3>
             </div>
             <p>
@@ -113,7 +188,7 @@
 
           <div class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." />
+              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
               <h3>100% Responsive</h3>
             </div>
             <p>
@@ -125,7 +200,7 @@
 
           <div class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." />
+              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
               <h3>Built-In SEO Foundations</h3>
             </div>
             <p>
@@ -138,7 +213,7 @@
 
           <div class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." />
+              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
               <h3>Accessibility</h3>
             </div>
             <p>
@@ -150,7 +225,7 @@
 
           <div class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." />
+              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
               <h3>Security</h3>
             </div>
             <p>
@@ -161,16 +236,16 @@
           </div>
         </div>
 
-        <a class="get-started-btn-light">Schedule Call</a>
+        <a class="get-started-btn-light" href="#">Schedule Call</a>
       </section>
 
-      <section class="why-us-section">
+      <section class="why-us-section" aria-labelledby="why-us-heading">
         <div class="developer-img-container">
-          <img class="developer-img" src="./images/desc-img.jpeg" alt="" />
+          <img class="developer-img" src="./images/desc-img.jpeg" alt="Main developer and owner of Zero Gravity Code, Alex Band" loading="lazy"/>
         </div>
 
         <div class="why-us-main-content">
-          <h2 class="why-us-heading">Why work with me?</h2>
+          <h2 class="why-us-heading" id="why-us-heading">Why work with me?</h2>
 
           <p class="why-us-description">
             I build websites from scratch without using page builders. That
@@ -272,8 +347,6 @@
 
       <section class="portfolio-section">
         <h2>My work</h2>
-
-        
 
         <ul class="portfolio-projects-list">
           <li>
@@ -401,7 +474,7 @@
         <h2>Who is this for?</h2>
 
         <div class="img-holder">
-          <img class="thumbs-up-img" src="./images/pondering.jpg" alt="" />
+          <img class="thumbs-up-img" src="./images/pondering.jpg" alt="Girl pondering a question" loading="lazy"/>
         </div>
 
         <div class="target-audience-cards">
@@ -492,6 +565,7 @@
               class="testimonial-img"
               src="./images/brett.jpg"
               alt="Brett Sayles smiling at the camera."
+              loading="lazy"
             />
             <div class="testimonial-text-holder">
               <blockquote id="quote-1">
@@ -509,6 +583,7 @@
               class="testimonial-img"
               src="./images/latronico.jpg"
               alt="Fernando Meyers smiling at the camera."
+              loading="lazy"
             />
             <div class="testimonial-text-holder">
               <blockquote id="quote-2">
@@ -526,6 +601,7 @@
               class="testimonial-img"
               src="./images/olly.jpg"
               alt="Olly Davidson smiling at the camera."
+              loading="lazy"
             />
 
             <div class="testimonial-text-holder">
