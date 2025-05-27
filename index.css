@@ -140,14 +140,14 @@ nav > ul,
 footer,
 .footer-links-container,
 .main-footer-text,
-.portfolio-projects-list > li,
+.portfolio-project-container,
 .feature,
 .pricing-card,
 .pricing-card-list,
 .footer-links > ul,
 .contact-link > p,
 .contact-info-container,
-.footer-contact-info > ul, .why-us-main-content {
+.footer-contact-info > ul, .why-us-main-content, .portfolio-section > ul, .target-audience-main-content, figure {
   display: flex;
   flex-direction: column;
 }
@@ -174,8 +174,16 @@ footer,
 .pricing-cards,
 .target-audience-cards,
 footer,
-.main-footer-text, .why-us-main-content {
+.main-footer-text, .why-us-main-content, .target-audience-main-content {
   gap: 2em;
+}
+
+.portfolio-project-container {
+  gap: 1.5em;
+}
+
+.portfolio-section > ul {
+  gap: 7em;
 }
 
 .logo-text,
@@ -183,8 +191,8 @@ footer,
 .feature-title,
 .feature,
 .card,
-.portfolio-projects-list > li,
-.target-audience-card {
+.target-audience-card,
+figure {
   gap: 1em;
 }
 
@@ -419,7 +427,6 @@ li {
 }
 
 
-
 /* Why Us Section */
 
 .why-us-section > * {
@@ -429,6 +436,8 @@ li {
 .developer-img-container {
   width: 100%;
   max-height: 630px;
+  overflow: hidden;
+  border-radius: 1em;
 }
 
 .developer-img {
@@ -465,7 +474,7 @@ li {
 
 /* Portfolio Section */
 
-.protfolio-project {
+.portfolio-project {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -475,12 +484,12 @@ li {
   cursor: pointer;
 }
 
-.protfolio-project:hover {
+.portfolio-project:hover {
   width: 110%;
   height: 110%;
 }
 
-.portfolio-projects-list > li {
+.portfolio-project-container {
   max-width: 550px;
 }
 
@@ -488,16 +497,15 @@ li {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  height: 164px;
+  height: 184px;
 }
 
-.portfolio-projects-list > li > .get-started-btn-light {
+.portfolio-project-container > .get-started-btn-light {
   align-self: flex-start;
   min-width: 200px;
-  margin-top: 0.5em;
 }
 
-.protfolio-title {
+.portfolio-title {
   font-size: 1.4rem;
   text-transform: uppercase;
 }
@@ -662,6 +670,19 @@ footer {
 .bold {
   font-weight: 700;
 }
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 
 /* Keyframes */
 
@@ -838,6 +859,10 @@ footer {
   .feature > p{
     font-size: 1.1rem;
   }
+
+  .developer-img-container {
+    max-height: unset;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -984,34 +1009,18 @@ footer {
     font-size: 1.2rem;
   }
 
-  .portfolio-section {
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em !important;
+  .portfolio-section > ul {
+    flex-direction: row;
+    gap: 2em;
   }
 
-  .portfolio-section > h2 {
-    width: 100%;
-  }
-
-  .portfolio-projects-list {
-    width: 30%;
-    max-width: 410px;
-  }
-
-  .portfolio-projects-list > li > p {
-    min-height: 136px;
+  .portfolio-project-container > p {
+    min-height: 135px;
     max-width: 380px;
   }
 
   .portfolio-image-container {
-    max-width: 250px;
-  }
-
-  .protfolio-title {
-    font-size: 1.4rem;
-    text-transform: uppercase;
+    max-width: 270px;
   }
 
   .pricing-cards {
@@ -1033,16 +1042,10 @@ footer {
     text-align: center;
   }
 
-
-  .target-audience-section {
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .target-audience-section > h2 {
-    width: 100%;
-    max-width: unset;
+  .target-audience-main-content {
+    flex-direction: row;
+    max-width: 100%;
+    gap: 3em;
   }
 
   .img-holder, .target-audience-cards {
@@ -1062,6 +1065,17 @@ footer {
     height: 390px;
     max-width: 500px;
     border-radius: 10em 1em 10em 1em;
+  }
+
+  .main-footer-text {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio-project-container > p {
+    min-height: 120px;
+    max-width: 380px;
   }
 }
 

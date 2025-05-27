@@ -70,10 +70,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico" />
 
     <!-- Preloads -->
-     <link rel="preload" as="image" href="./icons/burger-bar.png" />
+    <link rel="preload" as="image" href="./icons/burger-bar.png" />
 
     <!-- Preconnect only once per origin -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -114,13 +114,20 @@
               <span>Code</span>
             </span>
           </a>
-          <button class="menu-btn" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false">
+          <button
+            class="menu-btn"
+            tabindex="0"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
             <img class="burger-menu" src="./icons/burger-bar.png" alt="menu" />
           </button>
         </div>
         <ul class="nav-list">
           <li class="nav-list-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-current="page">Home</a>
+            <a class="nav-link" href="#" tabindex="-1" aria-current="page"
+              >Home</a
+            >
           </li>
           <li class="nav-list-item">
             <a class="nav-link" href="#" tabindex="-1">About Me</a>
@@ -154,16 +161,25 @@
         </div>
       </section>
 
-      <section class="features-section" id="features-section" aria-labelledby="features-heading">
+      <section
+        class="features-section"
+        id="features-section"
+        aria-labelledby="features-heading"
+        role="region"
+      >
         <h2 id="features-heading">
           Relax — I've got this.<br />
           You just enjoy the results
         </h2>
 
-        <div class="features">
-          <div class="feature" data-aos="fade-right">
+        <ul class="features">
+          <li class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
+              <img
+                src="./images/speedometer.png"
+                alt="Speedometer icon."
+                aria-hidden="true"
+              />
               <h3>Optimized Performance</h3>
             </div>
             <p>
@@ -171,11 +187,15 @@
               load which would be more than enough to make your visitor click
               away and go to your competitors
             </p>
-          </div>
+          </li>
 
-          <div class="feature" data-aos="fade-right">
+          <li class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
+              <img
+                src="./images/speedometer.png"
+                alt="Speedometer icon."
+                aria-hidden="true"
+              />
               <h3>Mobile First Design</h3>
             </div>
             <p>
@@ -184,11 +204,15 @@
               keeps things organized, and delivers a seamless experience across
               all screen sizes—no clutter, no waste.
             </p>
-          </div>
+          </li>
 
-          <div class="feature" data-aos="fade-right">
+          <li class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
+              <img
+                src="./images/speedometer.png"
+                alt="Speedometer icon."
+                aria-hidden="true"
+              />
               <h3>100% Responsive</h3>
             </div>
             <p>
@@ -196,11 +220,15 @@
               desktop screens. No matter what your visitor is using they will
               have seamless experience without any issues
             </p>
-          </div>
+          </li>
 
-          <div class="feature" data-aos="fade-right">
+          <li class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
+              <img
+                src="./images/speedometer.png"
+                alt="Speedometer icon."
+                aria-hidden="true"
+              />
               <h3>Built-In SEO Foundations</h3>
             </div>
             <p>
@@ -209,11 +237,15 @@
               heading structure, meta tags, and accessible markup. This gives
               your content the solid technical foundation search engines love
             </p>
-          </div>
+          </li>
 
-          <div class="feature" data-aos="fade-right">
+          <li class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
+              <img
+                src="./images/speedometer.png"
+                alt="Speedometer icon."
+                aria-hidden="true"
+              />
               <h3>Accessibility</h3>
             </div>
             <p>
@@ -221,11 +253,15 @@
               practices to ensure your content is readable and usable by all,
               including people using screen readers or keyboard navigation
             </p>
-          </div>
+          </li>
 
-          <div class="feature" data-aos="fade-right">
+          <li class="feature" data-aos="fade-right">
             <div class="feature-title">
-              <img src="./images/speedometer.png" alt="Speedometer icon." aria-hidden="true"/>
+              <img
+                src="./images/speedometer.png"
+                alt="Speedometer icon."
+                aria-hidden="true"
+              />
               <h3>Security</h3>
             </div>
             <p>
@@ -233,15 +269,24 @@
               practices to protect your site from common vulnerabilities and
               keep your data safe
             </p>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <a class="get-started-btn-light" href="#">Schedule Call</a>
       </section>
 
-      <section class="why-us-section" aria-labelledby="why-us-heading">
+      <section
+        class="why-us-section"
+        aria-labelledby="why-us-heading"
+        role="region"
+      >
         <div class="developer-img-container">
-          <img class="developer-img" src="./images/desc-img.jpeg" alt="Main developer and owner of Zero Gravity Code, Alex Band" loading="lazy"/>
+          <img
+            class="developer-img"
+            src="./images/desc-img.jpeg"
+            alt="Main developer and owner of Zero Gravity Code, Alex Band"
+            loading="lazy"
+          />
         </div>
 
         <div class="why-us-main-content">
@@ -253,8 +298,8 @@
             WordPress plugins and will stay on the page for years to come.
           </p>
 
-          <div class="cards">
-            <div class="card">
+          <ul class="cards">
+            <li class="card">
               <div class="point-heading">
                 <img class="check-icon" src="./icons/check-mark.png" alt="" />
                 <h3>Built with purpose</h3>
@@ -263,12 +308,12 @@
                 <p>
                   Every element on your site is there for a reason — to guide
                   your visitors, build trust, and drive results. No clutter, no
-                  distractions.
+                  distractions. Only what you need and your clients want
                 </p>
               </div>
-            </div>
+            </li>
 
-            <div class="card">
+            <li class="card">
               <div class="point-heading">
                 <img class="check-icon" src="./icons/check-mark.png" alt="" />
                 <h3>100% Hand-coded</h3>
@@ -281,9 +326,9 @@
                   performance.
                 </p>
               </div>
-            </div>
+            </li>
 
-            <div class="card">
+            <li class="card">
               <div class="point-heading">
                 <img class="check-icon" src="./icons/check-mark.png" alt="" />
                 <h3>Ongoing support</h3>
@@ -295,9 +340,9 @@
                   everything and make sure you're never left guessing.
                 </p>
               </div>
-            </div>
+            </li>
 
-            <div class="card">
+            <li class="card">
               <div class="point-heading">
                 <img class="check-icon" src="./icons/check-mark.png" alt="" />
                 <h3>Personal Touch</h3>
@@ -309,9 +354,9 @@
                   reflects exactly what you need. I'm always just one call away.
                 </p>
               </div>
-            </div>
+            </li>
 
-            <div class="card">
+            <li class="card">
               <div class="point-heading">
                 <img class="check-icon" src="./icons/check-mark.png" alt="" />
                 <h3>100% secure</h3>
@@ -323,9 +368,9 @@
                   protection for you — and your customers.
                 </p>
               </div>
-            </div>
+            </li>
 
-            <div class="card">
+            <li class="card">
               <div class="point-heading">
                 <img class="check-icon" src="./icons/check-mark.png" alt="" />
                 <h3>Money Back Garantee</h3>
@@ -337,111 +382,127 @@
                   behind every single project I take on.
                 </p>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
           <div class="get-started-btn-light-holder">
-            <a class="get-started-btn-light">Call Me Today</a>
+            <a href="#" class="get-started-btn-light">Call Me Today</a>
           </div>
         </div>
       </section>
 
-      <section class="portfolio-section">
-        <h2>My work</h2>
+      <section
+        class="portfolio-section"
+        aria-labelledby="my-work-heading"
+        role="region"
+      >
+        <h2 id="my-work-heading">My work</h2>
 
-        <ul class="portfolio-projects-list">
-          <li>
-            <div class="portfolio-image-container">
-              <img
-                class="protfolio-project"
-                src="./images/project-2-portfolio.png"
-                alt=""
-              />
+        <ul>
+          <li class="portfolio-projects-list">
+            <div class="portfolio-project-container">
+              <div class="portfolio-image-container">
+                <img
+                  class="portfolio-project"
+                  src="./images/project-2-portfolio.png"
+                  alt="Landing page built for Nallely Herrera"
+                />
+              </div>
+              <h3 class="portfolio-title">Nallely Herrera</h3>
+              <p>
+                This Landing Page was built for a poetess. It features classy
+                design, subtle animations. The idea was to make it look
+                sophisticated and bring more traffic to social media.
+              </p>
+              <a href="#" class="get-started-btn-light">Visit</a>
             </div>
-            <h3 class="protfolio-title">Nallely Herrera</h3>
-            <p>
-              This Landing Page was built for a poetess. It features classy
-              design, subtle animations. The idea was to make it look
-              sophisticated and bring more traffic to social media.
-            </p>
-            <a class="get-started-btn-light">Visit</a>
           </li>
-        </ul>
 
-        <ul class="portfolio-projects-list">
-          <li>
-            <div class="portfolio-image-container">
-              <img
-                class="protfolio-project"
-                src="./images/project-1-my-site.png"
-                alt=""
-              />
+          <li class="portfolio-projects-list">
+            <div class="portfolio-project-container">
+              <div class="portfolio-image-container">
+                <img
+                  class="portfolio-project"
+                  src="./images/project-1-my-site.png"
+                  alt="Landing Page built for Alex Band"
+                />
+              </div>
+              <h3 class="portfolio-title">Alex Band</h3>
+              <p>
+                This is a Landing Page I built for myself. It shows off nice,
+                minimalistic design, custom animations, SEO and accessibility
+                best practices and full responsiveness.
+              </p>
+              <a href="#" class="get-started-btn-light">Visit</a>
             </div>
-            <h3 class="protfolio-title">Alex Band</h3>
-            <p>
-              This is a Landing Page I built for myself. It shows off nice,
-              minimalistic design, custom animations, SEO and accessibility best
-              practices and full responsiveness.
-            </p>
-            <a class="get-started-btn-light">Visit</a>
           </li>
-        </ul>
 
-        <ul class="portfolio-projects-list">
-          <li>
-            <div class="portfolio-image-container">
-              <img
-                class="protfolio-project"
-                src="./images/project-3-my-site.png"
-                alt=""
-              />
+          <li class="portfolio-projects-list">
+            <div class="portfolio-project-container">
+              <div class="portfolio-image-container">
+                <img
+                  class="portfolio-project"
+                  src="./images/project-3-my-site.png"
+                  alt="Single Page Application for freelancers"
+                />
+              </div>
+              <h3 class="portfolio-title">Freelancer Dashboard</h3>
+              <p>
+                This Single Page Application wasn't built for a client, I built
+                it for fun. It features client side routing, authentication,
+                responsive design and light/dark theme toggle.
+              </p>
+              <a href="#" class="get-started-btn-light">Visit</a>
             </div>
-            <h3 class="protfolio-title">Freelancer Dashboard</h3>
-            <p>
-              This Signle Page Application wasn't built for a client, I built it
-              for fun. It features client side routing, authentication,
-              responsive design and light/dark theme toggle.
-            </p>
-            <a class="get-started-btn-light">Visit</a>
           </li>
         </ul>
       </section>
 
-      <section class="pricing-section">
-        <h2>Pricing</h2>
+      <section
+        class="pricing-section"
+        aria-labelledby="pricing-heading"
+        role="region"
+      >
+        <h2 id="pricing-heading">Pricing</h2>
         <p>
-          Most standard websites cost <span class="purple">$420 - $470</span>. I
-          will give you the exact amount after we have discussed your website
-          requiremnts. I will calculate the cost based on what you see below
+          Most standard websites cost
+          <strong class="purple">$420 - $470</strong>. I will give you the exact
+          amount after we have discussed your website requirements. I will
+          calculate the cost based on what you see below
         </p>
-        <div class="pricing-cards">
-          <div class="pricing-card">
+        <ul class="pricing-cards">
+          <li class="pricing-card">
             <h3 class="pricing-card-heading">Standard Website</h3>
             <ul class="pricing-card-list">
               <li>
                 <p>Design and Development</p>
-                <p>✔️</p>
+                <span class="sr-only">Included</span>
+                <p aria-hidden="true">✔️</p>
               </li>
               <li>
                 <p>Mobile responsive</p>
-                <p>✔️</p>
+                <span class="sr-only">Included</span>
+                <p aria-hidden="true">✔️</p>
               </li>
               <li>
                 <p>5 pages</p>
-                <p>✔️</p>
+                <span class="sr-only">Included</span>
+                <p aria-hidden="true">✔️</p>
               </li>
               <li>
-                <p>On Site SEO</p>
-                <p>✔️</p>
+                <p>On-Page SEO</p>
+                <span class="sr-only">Included</span>
+                <p aria-hidden="true">✔️</p>
               </li>
               <li>
                 <p>1 Year Free Domain</p>
-                <p>✔️</p>
+                <span class="sr-only">Included</span>
+                <p aria-hidden="true">✔️</p>
               </li>
             </ul>
             <p class="final-price">$400</p>
-            <a class="get-started-btn-light">Get Started</a>
-          </div>
-          <div class="pricing-card">
+            <a href="#" class="get-started-btn-light">Get Started</a>
+          </li>
+          <li class="pricing-card">
             <h3 class="pricing-card-heading">Extras</h3>
             <ul class="pricing-card-list">
               <li>
@@ -465,186 +526,218 @@
                 <p>$200</p>
               </li>
             </ul>
-            <a class="get-started-btn-light">Get Started</a>
-          </div>
-        </div>
+            <a href="#" class="get-started-btn-light">Get Started</a>
+          </li>
+        </ul>
       </section>
 
-      <section class="target-audience-section">
-        <h2>Who is this for?</h2>
+      <section
+        class="target-audience-section"
+        aria-labelledby="target-audience-heading"
+        role="region"
+      >
+        <h2 id="target-audience-heading">Who is this for?</h2>
 
-        <div class="img-holder">
-          <img class="thumbs-up-img" src="./images/pondering.jpg" alt="Girl pondering a question" loading="lazy"/>
-        </div>
-
-        <div class="target-audience-cards">
-          <div class="target-audience-card">
-            <img class="check-icon" src="./icons/check-mark.png" alt="" />
-            <div class="target-audience-card-text">
-              <p>
-                <span class="bold">Small business owners, freelancers</span>, or
-                <span class="bold">startups</span> who need a modern, fast, and
-                professional website that makes people trust you and contact you
-              </p>
-            </div>
+        <div class="target-audience-main-content">
+          <div class="img-holder">
+            <img
+              class="thumbs-up-img"
+              src="./images/pondering.jpg"
+              alt="Girl pondering a question"
+              loading="lazy"
+            />
           </div>
 
-          <div class="target-audience-card">
-            <img class="check-icon" src="./icons/check-mark.png" alt="" />
-            <div class="target-audience-card-text">
-              <p class="bold">Those who are tired of:</p>
-              <div class="bullet-point">
-                <img
-                  class="bullet-point-icon cross-mark"
-                  src="./icons/cross-mark.png"
-                  alt=""
-                />
-                <p>Slow, outdated websites</p>
-              </div>
-              <div class="bullet-point">
-                <img
-                  class="bullet-point-icon cross-mark"
-                  src="./icons/cross-mark.png"
-                  alt=""
-                />
-                <p>Expensive agencies that don't deliver results</p>
-              </div>
-              <div class="bullet-point">
-                <img
-                  class="bullet-point-icon cross-mark"
-                  src="./icons/cross-mark.png"
-                  alt=""
-                />
+          <ul class="target-audience-cards">
+            <li class="target-audience-card">
+              <img class="check-icon" src="./icons/check-mark.png" alt="" />
+              <div class="target-audience-card-text">
                 <p>
-                  DIY builders like Wix or Squarespace that look clunky or break
-                  easily
+                  <span class="bold">Small business owners, freelancers</span>,
+                  or <span class="bold">startups</span> who need a modern, fast,
+                  and professional website that makes people trust you and
+                  contact you
                 </p>
               </div>
-            </div>
-          </div>
+            </li>
 
-          <div class="target-audience-card">
-            <img class="check-icon" src="./icons/check-mark.png" alt="" />
-            <div class="target-audience-card-text">
-              <p class="bold">Perfect for businesses that want to:</p>
-              <div class="bullet-point">
-                <img
-                  class="bullet-point-icon"
-                  src="./icons/arrow-right.png"
-                  alt=""
-                />
-                <p>Show up on Google</p>
+            <li class="target-audience-card">
+              <img class="check-icon" src="./icons/check-mark.png" alt="" />
+              <div class="target-audience-card-main-content">
+                <p class="bold">Those who are tired of:</p>
+                <ul class="target-audience-card-text">
+                  <li class="bullet-point">
+                    <img
+                      class="bullet-point-icon cross-mark"
+                      src="./icons/cross-mark.png"
+                      alt=""
+                    />
+                    <p>Slow, outdated websites</p>
+                  </li>
+                  <li class="bullet-point">
+                    <img
+                      class="bullet-point-icon cross-mark"
+                      src="./icons/cross-mark.png"
+                      alt=""
+                    />
+                    <p>Expensive agencies that don't deliver results</p>
+                  </li>
+                  <li class="bullet-point">
+                    <img
+                      class="bullet-point-icon cross-mark"
+                      src="./icons/cross-mark.png"
+                      alt=""
+                    />
+                    <p>
+                      DIY builders like Wix or Squarespace that look clunky or
+                      break easily
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <div class="bullet-point">
-                <img
-                  class="bullet-point-icon"
-                  src="./icons/arrow-right.png"
-                  alt=""
-                />
-                <p>Look professional and trustworthy</p>
+            </li>
+
+            <li class="target-audience-card">
+              <img class="check-icon" src="./icons/check-mark.png" alt="" />
+              <div class="target-audience-card-main-content">
+                <p class="bold">Perfect for businesses that want to:</p>
+                <ul class="target-audience-card-text">
+                  <li class="bullet-point">
+                    <img
+                      class="bullet-point-icon"
+                      src="./icons/arrow-right.png"
+                      alt=""
+                    />
+                    <p>Show up on Google</p>
+                  </li>
+                  <li class="bullet-point">
+                    <img
+                      class="bullet-point-icon"
+                      src="./icons/arrow-right.png"
+                      alt=""
+                    />
+                    <p>Look professional and trustworthy</p>
+                  </li>
+                  <li class="bullet-point">
+                    <img
+                      class="bullet-point-icon"
+                      src="./icons/arrow-right.png"
+                      alt=""
+                    />
+                    <p>Make it easy for customers to get in touch</p>
+                  </li>
+                </ul>
               </div>
-              <div class="bullet-point">
-                <img
-                  class="bullet-point-icon"
-                  src="./icons/arrow-right.png"
-                  alt=""
-                />
-                <p>Make it easy for customers to get in touch</p>
-              </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="testimonials-section" id="testimonials-section">
-        <h2>Testimonials</h2>
+      <section
+        class="testimonials-section"
+        id="testimonials-section"
+        aria-labelledby="testimonials-heading"
+        role="region"
+      >
+        <h2 id="testimonials-heading">Testimonials</h2>
 
-        <div class="testimonials">
-          <div class="testimonial" data-aos="fade-up">
-            <img
-              class="testimonial-img"
-              src="./images/brett.jpg"
-              alt="Brett Sayles smiling at the camera."
-              loading="lazy"
-            />
-            <div class="testimonial-text-holder">
-              <blockquote id="quote-1">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tempora fugit beatae eveniet voluptates obcaecati natus minus
-                assumenda voluptatibus nam alias dolores quidem recusandae
-                ratione, quaerat vero minima molestiae non ducimus!"
-              </blockquote>
-              <p class="quote-author">Brett Sayles</p>
-            </div>
-          </div>
+        <ul class="testimonials">
+          <li class="testimonial" data-aos="fade-up">
+            <figure>
+              <img
+                class="testimonial-img"
+                src="./images/brett.jpg"
+                alt="Brett Sayles smiling at the camera."
+                loading="lazy"
+              />
+              <div class="testimonial-text-holder">
+                <blockquote id="quote-1">
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora fugit beatae eveniet voluptates obcaecati natus minus
+                  assumenda voluptatibus nam alias dolores quidem recusandae
+                  ratione, quaerat vero minima molestiae non ducimus!"
+                </blockquote>
+                <figcaption class="quote-author">Brett Sayles</figcaption>
+              </div>
+            </figure>
+          </li>
 
-          <div class="testimonial" data-aos="fade-up">
-            <img
-              class="testimonial-img"
-              src="./images/latronico.jpg"
-              alt="Fernando Meyers smiling at the camera."
-              loading="lazy"
-            />
-            <div class="testimonial-text-holder">
-              <blockquote id="quote-2">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tempora fugit beatae eveniet voluptates obcaecati natus minus
-                assumenda voluptatibus nam alias dolores quidem recusandae
-                ratione, quaerat vero minima molestiae non ducimus!"
-              </blockquote>
-              <p class="quote-author">Fernando Meyers</p>
-            </div>
-          </div>
+          <li class="testimonial" data-aos="fade-up">
+            <figure>
+              <img
+                class="testimonial-img"
+                src="./images/latronico.jpg"
+                alt="Fernando Meyers smiling at the camera."
+                loading="lazy"
+              />
+              <div class="testimonial-text-holder">
+                <blockquote id="quote-2">
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora fugit beatae eveniet voluptates obcaecati natus minus
+                  assumenda voluptatibus nam alias dolores quidem recusandae
+                  ratione, quaerat vero minima molestiae non ducimus!"
+                </blockquote>
+                <figcaption class="quote-author">Fernando Meyers</figcaption>
+              </div>
+            </figure>
+          </li>
 
-          <div class="testimonial" data-aos="fade-up">
-            <img
-              class="testimonial-img"
-              src="./images/olly.jpg"
-              alt="Olly Davidson smiling at the camera."
-              loading="lazy"
-            />
+          <li class="testimonial" data-aos="fade-up">
+            <figure>
+              <img
+                class="testimonial-img"
+                src="./images/olly.jpg"
+                alt="Olly Davidson smiling at the camera."
+                loading="lazy"
+              />
 
-            <div class="testimonial-text-holder">
-              <blockquote id="quote-3">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tempora fugit beatae eveniet voluptates obcaecati natus minus
-                assumenda voluptatibus nam alias dolores quidem recusandae
-                ratione, quaerat vero minima molestiae non ducimus!"
-              </blockquote>
-              <p class="quote-author">Olly Davidson</p>
-            </div>
-          </div>
-        </div>
+              <div class="testimonial-text-holder">
+                <blockquote id="quote-3">
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora fugit beatae eveniet voluptates obcaecati natus minus
+                  assumenda voluptatibus nam alias dolores quidem recusandae
+                  ratione, quaerat vero minima molestiae non ducimus!"
+                </blockquote>
+                <figcaption class="quote-author">Olly Davidson</figcaption>
+              </div>
+            </figure>
+          </li>
+        </ul>
       </section>
 
-      <section class="final-section" id="final-section">
-        <h2>Ready for Lift-off?</h2>
+      <section
+        class="final-section"
+        id="final-section"
+        aria-labelledby="cta-heading"
+        role="region"
+      >
+        <h2 id="cta-heading">Ready for Lift-off?</h2>
         <p>Join others already orbiting success.</p>
-        <button class="get-started-btn">Get Started</button>
+        <a href="#" class="get-started-btn">Get Started</a>
       </section>
     </main>
     <footer>
-      <span class="logo-footer">
+      <a href="#" class="logo-footer" aria-label="Homepage - Zero Gravity Code">
         <span class="logo-footer-text">
           <span>Zero</span>
           <span>Gravity</span>
           <span>Code</span>
         </span>
-      </span>
+      </a>
       <div>
         <div class="main-footer-text">
-          <div class="footer-links-container">
+          <div class="footer-links-container" role="navigation">
             <h3>Quick Access</h3>
             <div class="footer-links">
               <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Services</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Services</a></li>
               </ul>
               <ul>
-                <li><a href="">Pricing</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
               </ul>
             </div>
           </div>
@@ -653,27 +746,27 @@
             <div class="footer-contact-info">
               <ul>
                 <li>
-                  <a class="contact-link" href="">
-                    <div class="font-awesome-icon">
+                  <a class="contact-link" href="#" aria-label="WhatsApp: +52 33 2804 3351">
+                    <div class="font-awesome-icon" aria-hidden="true">
                       <i class="fa-brands fa-lg fa-whatsapp"></i>
                     </div>
                     <p>+52 33 2804 3351</p>
                   </a>
                 </li>
                 <li>
-                  <a class="contact-link" href="">
-                    <div class="font-awesome-icon">
+                  <a class="contact-link" href="#" aria-label="Email: alexbanddev1996@gmail.com">
+                    <div class="font-awesome-icon" aria-hidden="true">
                       <i class="fa-regular fa-lg fa-envelope"></i>
                     </div>
                     <p>alexbanddev1996@gmail.com</p>
                   </a>
                 </li>
                 <li>
-                  <a class="contact-link" href="">
-                    <div class="font-awesome-icon">
+                  <a class="contact-link" href="#" aria-label="Contact Page">
+                    <div class="font-awesome-icon" aria-hidden="true">
                       <i class="fa-regular fa-lg fa-address-book"></i>
                     </div>
-                    <p>Contact</p>
+                    <p>Contact Me</p>
                   </a>
                 </li>
               </ul>
