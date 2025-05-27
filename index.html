@@ -79,39 +79,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload key fonts for faster Largest Contentful Paint -->
+    <!-- Preload fonts: optional but helps hint at priority -->
     <link
       rel="preload"
       as="style"
       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
+      onload="this.rel='stylesheet'"
     />
     <link
       rel="preload"
       as="style"
       href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      onload="this.rel='stylesheet'"
     />
-
-    <!-- Font stylesheets -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
-      rel="stylesheet"
-    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      />
+    </noscript>
 
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
 
     <!-- AOS CDN -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- Styles -->
+    <style>
+      body,
+      button,
+      a {
+        font-family: "Exo 2", sans-serif;
+        color: rgb(255, 222, 255);
+      }
+
+      h1 {
+        font-size: 2em;
+        font-family: "Audiowide", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -796,9 +822,15 @@
         </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
     <script src="index.js" defer></script>
   </body>
 </html>

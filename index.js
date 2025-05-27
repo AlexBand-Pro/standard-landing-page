@@ -145,24 +145,22 @@ function trapFocus() {
 
     if (e.key === "Tab") {
       if (e.shiftKey) {
-        // Shift + Tab
         if (document.activeElement === firstEl) {
           e.preventDefault();
           lastEl.focus();
         }
       } else {
-        // Tab
         if (document.activeElement === lastEl) {
           e.preventDefault();
           firstEl.focus();
         }
       }
     } else if (e.key === "Escape") {
-      // Optional: close menu with Escape
+
       menuOpen = false;
       navLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
       navList.classList.remove("open");
-      menuBtn.focus(); // return focus to the menu button
+      menuBtn.focus();
     }
   });
 }
@@ -262,7 +260,6 @@ function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  // Clear existing stars
   stars.length = 0;
   shootingStars.length = 0;
 
@@ -276,7 +273,7 @@ function resizeCanvas() {
       delta: Math.random() * 0.02,
       vx: (Math.random() - 0.5) * 0.1,
       vy: (Math.random() - 0.5) * 0.1,
-      color: randomStarColor(), // if you're using colored stars
+      color: randomStarColor(),
     });
   }
 }
@@ -288,13 +285,6 @@ const callback = (entries, observer) => {
     if (entry.isIntersecting) {
       const el = entry.target;
       el.classList.add("visible");
-
-      // if (entry.IntersectionRation >= 0.9) {
-      //   if (el.id === "quote-1") {
-      //     console.log(el)
-      //     el.classList.add("visible")
-      //   }
-      // }
     }
   });
 };
