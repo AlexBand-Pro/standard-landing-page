@@ -79,13 +79,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Exo 2 font: only load weights you actually use (400, 600, 700) -->
+    <!-- Preload key fonts for faster Largest Contentful Paint -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+    />
+
+    <!-- Font stylesheets -->
     <link
       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Audiowide font: it only has one style (400), so no need for weight -->
     <link
       href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
       rel="stylesheet"
@@ -746,7 +756,11 @@
             <div class="footer-contact-info">
               <ul>
                 <li>
-                  <a class="contact-link" href="#" aria-label="WhatsApp: +52 33 2804 3351">
+                  <a
+                    class="contact-link"
+                    href="#"
+                    aria-label="WhatsApp: +52 33 2804 3351"
+                  >
                     <div class="font-awesome-icon" aria-hidden="true">
                       <i class="fa-brands fa-lg fa-whatsapp"></i>
                     </div>
@@ -754,7 +768,11 @@
                   </a>
                 </li>
                 <li>
-                  <a class="contact-link" href="#" aria-label="Email: alexbanddev1996@gmail.com">
+                  <a
+                    class="contact-link"
+                    href="#"
+                    aria-label="Email: alexbanddev1996@gmail.com"
+                  >
                     <div class="font-awesome-icon" aria-hidden="true">
                       <i class="fa-regular fa-lg fa-envelope"></i>
                     </div>
