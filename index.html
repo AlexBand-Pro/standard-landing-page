@@ -79,84 +79,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload fonts: optional but helps hint at priority -->
+    <!-- Preload key fonts for faster Largest Contentful Paint -->
     <link
       rel="preload"
       as="style"
       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
-      onload="this.rel='stylesheet'"
     />
     <link
       rel="preload"
       as="style"
       href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
-      onload="this.rel='stylesheet'"
     />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
-      />
-    </noscript>
+
+    <!-- Font stylesheets -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      media="print"
-      onload="this.media='all'"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
 
     <!-- AOS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      media="print"
-      onload="this.media='all'"
-    />
-
-    <!-- Styles -->
-    <style>
-      body,
-      button,
-      a {
-        font-family: "Exo 2", sans-serif;
-        color: rgb(255, 222, 255);
-      }
-
-      h1 {
-        font-size: 2em;
-        font-family: "Audiowide", sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 0.01em;
-      }
-
-      @media (min-width: 470px) {
-        h1 {
-          font-size: 2.6em;
-          letter-spacing: 0.02em;
-        }
-      }
-
-      @media (min-width: 768px) {
-        h1 {
-          font-size: 3rem;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        h1 {
-          font-size: 4.5rem;
-        } 
-      }
-    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -338,7 +293,7 @@
         <div class="developer-img-container">
           <img
             class="developer-img"
-            src="./images/desc-img.jpeg"
+            src="./images/desc-img-reduced.webp"
             alt="Main developer and owner of Zero Gravity Code, Alex Band"
             loading="lazy"
           />
@@ -458,7 +413,7 @@
               <div class="portfolio-image-container">
                 <img
                   class="portfolio-project"
-                  src="./images/project-2-portfolio.png"
+                  src="./images/project-2-portfolio-reduced.webp"
                   alt="Landing page built for Nallely Herrera"
                 />
               </div>
@@ -477,7 +432,7 @@
               <div class="portfolio-image-container">
                 <img
                   class="portfolio-project"
-                  src="./images/project-1-my-site.png"
+                  src="./images/project-1-my-site-reduced.webp"
                   alt="Landing Page built for Alex Band"
                 />
               </div>
@@ -496,7 +451,7 @@
               <div class="portfolio-image-container">
                 <img
                   class="portfolio-project"
-                  src="./images/project-3-my-site.png"
+                  src="./images/project-3-my-site-reduced.webp"
                   alt="Single Page Application for freelancers"
                 />
               </div>
@@ -597,7 +552,7 @@
           <div class="img-holder">
             <img
               class="thumbs-up-img"
-              src="./images/pondering.jpg"
+              src="./images/pondering-reduced.webp"
               alt="Girl pondering a question"
               loading="lazy"
             />
@@ -701,7 +656,7 @@
             <figure>
               <img
                 class="testimonial-img"
-                src="./images/brett.jpg"
+                src="./images/brett-reduced.jpg"
                 alt="Brett Sayles smiling at the camera."
                 loading="lazy"
               />
@@ -721,7 +676,7 @@
             <figure>
               <img
                 class="testimonial-img"
-                src="./images/latronico.jpg"
+                src="./images/latronico-reduced.jpg"
                 alt="Fernando Meyers smiling at the camera."
                 loading="lazy"
               />
@@ -741,7 +696,7 @@
             <figure>
               <img
                 class="testimonial-img"
-                src="./images/olly.jpg"
+                src="./images/olly-reduced.jpg"
                 alt="Olly Davidson smiling at the camera."
                 loading="lazy"
               />
@@ -842,14 +797,8 @@
       </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"
-      defer
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
     <script src="index.js" defer></script>
   </body>
 </html>
