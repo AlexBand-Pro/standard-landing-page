@@ -1103,13 +1103,10 @@ footer {
 
   .hero-text {
     gap: 3em;
+    max-width: 900px;
   }
 
   
-
-  .hero-text > p {
-    font-size: 2.3em;
-  }
   
   .get-started-btn {
     font-size: 1.4rem;
