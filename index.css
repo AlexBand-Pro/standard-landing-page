@@ -1137,4 +1137,29 @@ footer {
   .developer-img {
     border-radius: 20em 1em 20em 1em
   }
+
+  .target-audience-main-content {
+    gap: 3.5em;
+  }
+
+  .portfolio-section > ul {
+    gap: 5em;
+  }
+
+  .check-icon {
+    margin-top: 0.4em !important;
+  }
+
+  .img-holder, .thumbs-up-img  {
+    max-width: 550px;
+    height: 510px;
+  }
+
+   .bullet-point > p, .target-audience-card-text > p, .target-audience-card-main-content > p {
+    font-size: 1.4rem;
+   }
+
+  .target-audience-card-text {
+    max-width: 550px;
+  }
 }

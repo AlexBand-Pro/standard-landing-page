@@ -4,7 +4,7 @@ AOS.init({
 
 gsap.registerPlugin(ScrollTrigger);
 
-const tween = gsap.to("li", {
+const tween = gsap.to(".nav-list-item", {
   duration: 0.4,
   y: 0,
   ease: "power1.out",
@@ -53,7 +53,6 @@ menuBtn.addEventListener("click", () => {
 
   clicked = !clicked;
   menuOpen = !menuOpen;
-  console.log(menuOpen);
 
   navLinks.forEach((link) => {
     link.setAttribute("tabindex", menuOpen ? "0" : "-1");
@@ -62,7 +61,6 @@ menuBtn.addEventListener("click", () => {
   menuBtn.setAttribute("aria-expanded", menuOpen ? "true" : "false");
 
   if (menuOpen) {
-    menuBtn.setAttribute()
     trapFocus();
   }
 });
@@ -80,6 +78,9 @@ function updateTabIndexBasedOnScreenSize() {
       } else {
         document.querySelectorAll(".nav-list-item").forEach((link) => {
           link.style = "none";
+          link.style.display = "flex";
+          link.style.alignItems = "center";
+          link.style.justifyContent = "center";
         });
       }
 
