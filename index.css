@@ -1106,7 +1106,13 @@ footer {
     max-width: 900px;
   }
 
-  
+  h1 {
+    font-size: 4.5em;
+  }
+
+  .hero-text > p {
+    font-size: 2.3em;
+  }
   
   .get-started-btn {
     font-size: 1.4rem;
