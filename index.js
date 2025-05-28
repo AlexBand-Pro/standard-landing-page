@@ -83,8 +83,6 @@ function updateTabIndexBasedOnScreenSize() {
           link.style.justifyContent = "center";
         });
       }
-
-      console.log(menuOpen, clicked);
     } else {
       link.setAttribute("tabindex", menuOpen ? "0" : "-1");
     }

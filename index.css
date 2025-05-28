@@ -80,7 +80,7 @@ a {
   transition: color 0.2s;
 }
 
-.footer-links a:hover, .contact-link:hover, .nav-link:hover {
+.footer-links a:hover, .contact-link:hover, .nav-link:hover, .current-page-highlight {
   color: #8f00cc;
 }
 
@@ -302,7 +302,7 @@ li {
 .hero-text {
   max-width: 1200px;
   width: 100%;
-  padding-top: 40px;
+  /* padding-top: 40px; */
 }
 
 .hero-text > p {
@@ -361,6 +361,7 @@ li {
 .feature-title {
   font-size: 1.2rem;
   text-transform: uppercase;
+  align-items: center;
 }
 
 .feature {
@@ -683,6 +684,86 @@ footer {
   border: 0 !important;
 }
 
+/* About Me Page */
+
+section.expectations-section, .steps-section, .portfolio-section, .pricing-section, .target-audience-section, .why-us-section {
+  min-height: unset;
+  height: 100vh;
+}
+
+section.expectations-section, .steps-section {
+  gap: 5em !important;
+}
+
+.portfolio-section, .pricing-section, .target-audience-section, section.expectations-section, .steps-section {
+  max-height: 900px;
+}
+
+.why-us-section {
+  max-height: 1100px;
+}
+
+.hero-section.about-page-hero {
+  flex-direction: column;
+}
+
+.hero-text-about {
+  height: fit-content;
+  padding-block: 3.5em;
+  max-width: 100%;
+}
+
+.about-main-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.about-page-heading {
+  text-align: left;
+}
+
+.why-us-main-content-about-me {
+  z-index: 20;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.about-page-features > li {
+  width: 100%;
+  max-height: 220px;
+  min-height: 220px;
+}
+
+.about-page-steps > li {
+  width: 100%;
+  max-height: 240px;
+  min-height: 240px;
+}
+
+.about-page-steps {
+  width: 100%;
+}
+
+.about-page-title > h3 {
+  font-size: 1.5rem;
+}
+
+.steps-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  text-align: center;
+}
+
+.steps-heading > p {
+  max-width: 550px;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
 
 /* Keyframes */
 
@@ -863,6 +944,8 @@ footer {
   .developer-img-container {
     max-height: unset;
   }
+
+  /* About Page */
 }
 
 @media (min-width: 1024px) {
@@ -1070,6 +1153,23 @@ footer {
   .main-footer-text {
     max-width: 600px;
   }
+
+  /* About Me Page */
+
+  .why-us-main-content-about-me {
+    max-width: 1378px;
+    flex-direction: row;
+    gap: 3em;
+  }
+
+  .developer-img-container-about-me {
+    min-width: 45%;
+    height: 50%;
+  }
+
+  .hero-text-about {
+    padding-block: 5.5em;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1161,5 +1261,15 @@ footer {
 
   .target-audience-card-text {
     max-width: 550px;
+  }
+
+  /* About Me Page */
+
+  .why-us-description-about-me {
+    font-size: 1.2rem;
+  }
+
+  .hero-text-about {
+    padding-block: 7.5em;
   }
 }
