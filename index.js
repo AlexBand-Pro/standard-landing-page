@@ -4,33 +4,23 @@ AOS.init({
 
 gsap.registerPlugin(ScrollTrigger);
 
-const tween = gsap.to(".nav-list-item", {
-  duration: 0.4,
-  y: 0,
-  ease: "power1.out",
-  paused: true,
-});
+const defaultEase = "power1.out";
 
-const menuButtonTween = gsap.to(".menu-btn", {
+const createTween = (target, props) =>
+  gsap.to(target, {
+    duration: props.duration || 0.4,
+    ease: props.ease || defaultEase,
+    paused: true,
+    ...props,
+  });
+
+const tween = createTween(".nav-list-item", { y: 0 });
+const menuButtonTween = createTween(".menu-btn", {
   duration: 0.2,
   rotation: 180,
-  ease: "power1.out",
-  paused: true,
 });
-
-const bgImgTween = gsap.to(".logo", {
-  duration: 0.4,
-  backgroundPosition: "75px 50%",
-  ease: "power1.out",
-  paused: true,
-});
-
-const ultween = gsap.to(".nav-list", {
-  duration: 0.4,
-  height: 290,
-  ease: "power1.out",
-  paused: true,
-});
+const bgImgTween = createTween(".logo", { backgroundPosition: "75px 50%" });
+const ultween = createTween(".nav-list", { height: 290 });
 
 const menuBtn = document.querySelector(".menu-btn");
 const navList = document.querySelector(".nav-list");
@@ -155,7 +145,6 @@ function trapFocus() {
         }
       }
     } else if (e.key === "Escape") {
-
       menuOpen = false;
       navLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
       navList.classList.remove("open");
