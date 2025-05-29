@@ -102,7 +102,7 @@ window.addEventListener("keydown", handleFirstTab);
 const headerTL = gsap.timeline({
   scrollTrigger: {
     trigger: ".hero-section",
-    start: "30% 10%",
+    start: "200px 10%",
     end: "+=20px",
     scrub: 0.5,
   },
