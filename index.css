@@ -1247,6 +1247,20 @@ article > ul {
   .reversed {
     flex-direction: row-reverse;
   }
+
+  /* Services Page */
+
+  article > h3 {
+    font-size: 2rem;
+  }
+
+  article > h4 {
+    font-size: 1.4rem;
+  }
+
+  article > p, article > ul > li {
+    font-size: 1.1rem;
+  }
 }
 
 @media (min-width: 1200px) {
