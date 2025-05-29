@@ -686,23 +686,6 @@ footer {
 
 /* About Me Page */
 
-section.expectations-section, .steps-section, .portfolio-section, .pricing-section, .target-audience-section, .why-us-section {
-  min-height: unset;
-  height: 100vh;
-}
-
-section.expectations-section, .steps-section {
-  gap: 5em !important;
-}
-
-.portfolio-section, .pricing-section, .target-audience-section, section.expectations-section, .steps-section {
-  max-height: 900px;
-}
-
-.why-us-section {
-  max-height: 1100px;
-}
-
 .hero-section.about-page-hero {
   flex-direction: column;
 }
@@ -1272,4 +1255,21 @@ h4 {
   .hero-text-about {
     padding-block: 7.5em;
   }
+
+  /* section.expectations-section, .steps-section, .portfolio-section, .pricing-section, .target-audience-section, .why-us-section {
+    min-height: unset;
+    height: 100vh;
+  }
+
+  section.expectations-section, .steps-section {
+    gap: 5em !important;
+  }
+
+  .portfolio-section, .pricing-section, .target-audience-section, section.expectations-section, .steps-section {
+    max-height: 900px;
+  }
+
+  .why-us-section {
+    max-height: 1100px;
+  } */
 }
