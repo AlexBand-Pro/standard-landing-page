@@ -117,7 +117,7 @@ a {
 }
 
 .footer-links a:hover, .contact-link:hover, .nav-link:hover, .current-page-highlight {
-  color: #be55eb;
+  color: #E16BE1;
 }
 
 .user-is-tabbing a:focus,
@@ -701,7 +701,7 @@ footer {
 }
 
 .purple {
-  color: rgb(182, 16, 182);
+  color: #E16BE1;
 }
 
 .bold {
