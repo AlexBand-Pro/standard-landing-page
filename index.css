@@ -722,6 +722,10 @@ footer {
 
 /* About Me Page */
 
+.about-page-main > section {
+  padding-block: 4em;
+}
+
 .hero-section.about-page-hero {
   flex-direction: column;
 }
@@ -793,6 +797,10 @@ h4 {
 
 .icon {
   flex-shrink: 0;
+}
+
+.remove-radius {
+  border-radius: 1em !important;
 }
 
 
@@ -1200,6 +1208,10 @@ h4 {
 
   .hero-text-about {
     padding-block: 5.5em;
+  }
+
+  .reversed {
+    flex-direction: row-reverse;
   }
 }
 
