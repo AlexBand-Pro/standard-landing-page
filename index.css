@@ -837,6 +837,21 @@ article > ul {
   gap: 3em;
 }
 
+/* Pricing Page */
+
+.pricing-cards-pricing-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  z-index: 20;
+}
+
+.pricing-cards-pricing-page > p {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
 
 /* Keyframes */
 
@@ -1260,6 +1275,24 @@ article > ul {
 
   article > p, article > ul > li {
     font-size: 1.1rem;
+  }
+
+  /* Pricing Page */
+
+  .pricing-cards-pricing-page {
+    gap: 4em;
+  }
+
+  .pricing-cards-pricing-page > p {
+    font-size: 1.4rem;
+    padding-bottom: 5em;
+  }
+  .pricing-page-card-heading {
+    font-size: 1.8rem;
+  }
+
+  .pricing-page-cards > ul > p {
+    font-size: 1.2rem;
   }
 }
 
