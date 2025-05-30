@@ -724,6 +724,10 @@ footer {
   border: 0 !important;
 }
 
+.left-aligned {
+  text-align: left;
+}
+
 /* About Me Page */
 
 .about-page-main > section {
@@ -936,6 +940,7 @@ form > button:hover {
 .contact-number > a:hover {
   text-decoration: underline;
 }
+
 
 /* Keyframes */
 
