@@ -1126,6 +1126,7 @@ form > button:hover {
 @media (min-width: 1024px) {
   section:not(.hero-section) {
     padding-top: 7em;
+    padding-bottom: 6em;
   }
 
   .menu {
