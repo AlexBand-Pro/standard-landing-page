@@ -928,7 +928,7 @@ form > button:hover {
 .contact-container:hover .svg-container {
   background-color: #f6e0ff;
   color: black;
-  transform: scale(1.07);
+  transform: scale(1.1);
   box-shadow: 0 0 30px #E16BE1;
 }
 
