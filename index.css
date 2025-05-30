@@ -122,7 +122,11 @@ a {
 
 .user-is-tabbing a:focus,
 .user-is-tabbing button:focus {
-  outline: 2px solid #8f00cc;
+  outline: 1px solid #8f00cc;
+}
+
+input:focus, textarea:focus {
+  outline: 1px solid #8f00cc;
 }
 
 /* Shared Styles in Sections */
@@ -852,6 +856,86 @@ article > ul {
   margin: 0 auto;
 }
 
+/* Contact Section */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  padding: 1px;
+}
+
+input, textarea, form > button {
+  width: 100%;
+  padding: 0.8em 0.7em;
+  border-radius: 0.25em;
+  font-size: 1rem;
+  font-family: "Exo 2", "Gill Sans";
+  background-color: #2d0041;
+  border: none;
+  color: #ffe7ff;
+  resize: none;
+}
+
+form > button {
+  transition: all 0.3s;
+  font-weight: 700;
+}
+
+form > button:hover {
+  background-color: #E16BE1;
+  color: #000000;
+}
+
+.radius-none {
+  border-radius: 0;
+}
+
+::placeholder {
+  color: #ffe7ff;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: fit-content;
+}
+
+.svg-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffe7ff;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.contact-container:hover .svg-container {
+  background-color: #f6e0ff;
+  color: black;
+  transform: scale(1.07);
+  box-shadow: 0 0 30px #E16BE1;
+}
+
+.contact-heading {
+  font-size: 1.4rem;
+  margin-top: -0.3em;
+}
+
+.contact-number > a:hover {
+  text-decoration: underline;
+}
 
 /* Keyframes */
 
@@ -1032,8 +1116,6 @@ article > ul {
   .developer-img-container {
     max-height: unset;
   }
-
-  /* About Page */
 }
 
 @media (min-width: 1024px) {
@@ -1293,6 +1375,16 @@ article > ul {
 
   .pricing-page-cards > ul > p {
     font-size: 1.2rem;
+  }
+
+  /* Contact Page */
+
+  .contact-container {
+    gap: 1.25em;
+  }
+
+  .contact-information {
+    gap: 1.5em;
   }
 }
 
