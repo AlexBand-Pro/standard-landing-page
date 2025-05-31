@@ -1124,6 +1124,11 @@ form > button:hover {
 }
 
 @media (min-width: 1024px) {
+  .nav-link {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
   section:not(.hero-section) {
     padding-top: 7em;
     padding-bottom: 6em;
@@ -1420,7 +1425,6 @@ form > button:hover {
 
   .nav-link {
     font-size: 1.4rem;
-    font-weight: 700;
   }
 
   .hero-text {
