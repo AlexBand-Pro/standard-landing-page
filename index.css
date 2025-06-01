@@ -77,6 +77,11 @@ section {
   min-height: 100vh;
 }
 
+.steps-section, .certificates-section, .pricing-section {
+ padding-bottom: 4em;
+}
+
+
 section:not(.hero-section, .final-section) {
   min-height: fit-content;
 }
