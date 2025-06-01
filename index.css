@@ -861,6 +861,10 @@ article > ul {
   gap: 3em;
 }
 
+.services-text > .get-started-btn-light-holder > .get-started-btn-light {
+  margin-top: -0.6em;
+}
+
 /* Pricing Page */
 
 .pricing-cards-pricing-page {
@@ -1398,6 +1402,10 @@ form > button:hover {
 
   article > p, article > ul > li {
     font-size: 1.1rem;
+  }
+
+  .services-text > .get-started-btn-light-holder > .get-started-btn-light {
+    margin-top: -1.3em;
   }
 
   /* Pricing Page */
