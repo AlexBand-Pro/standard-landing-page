@@ -375,8 +375,8 @@ li {
   border: none;
   padding: 0.5em 1em;
   border-radius: 10em;
-  color: #f6e0ff;
   text-align: center;
+  color: #ffffff;
 }
 
 .get-started-btn-light {
@@ -953,6 +953,9 @@ form > button:hover {
   text-decoration: underline;
 }
 
+.contact-page-hero {
+  padding-bottom: 5em !important;
+}
 
 /* Keyframes */
 
