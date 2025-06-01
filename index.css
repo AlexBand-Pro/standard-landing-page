@@ -745,6 +745,10 @@ footer {
   text-align: left;
 }
 
+.white {
+  color: #ffffff;
+}
+
 /* About Me Page */
 
 .about-page-main > section {
