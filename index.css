@@ -46,9 +46,11 @@ html {
   scroll-behavior: smooth;
 }
 
-body, button, a {
+body, button, a, .about-main-text, .pricing-card-list, ::placeholder {
   font-family: "Exo 2", "Gill Sans";
-  color: rgb(255, 222, 255);
+  /* color: rgb(255, 222, 255); */
+  /* color: rgb(252, 226, 252); */
+  color: rgb(253, 239, 253);
 }
 
 body {
@@ -75,6 +77,10 @@ section {
   min-height: 100vh;
 }
 
+section:not(.hero-section, .final-section) {
+  min-height: fit-content;
+}
+
 h1 {
   font-size: 2em;
   font-family: "Audiowide", Verdana, sans-serif;
@@ -91,6 +97,14 @@ h2 {
   font-size: 1.6rem;
   line-height: 1.1;
   text-transform: uppercase;
+}
+
+h2, h3, h4, .final-price, .lightpink, .quote-author {
+  color: #ffffff;
+}
+
+.hero-text > p, .why-us-description {
+  color: rgb(253, 239, 253);
 }
 
 .testimonial-img {
@@ -223,7 +237,7 @@ footer,
 }
 
 .portfolio-section > ul {
-  gap: 7em;
+  gap: 4em;
 }
 
 .logo-text,
@@ -348,7 +362,6 @@ li {
 .hero-text > p {
   margin-top: -0.4em;
   font-size: 1em;
-  color: lightgrey;
 }
 
 .get-started-btn {
@@ -395,7 +408,6 @@ li {
 
 .features-section, .testimonials-section {
   background-color: #000000;
-  margin-top: 3rem;
 }
 
 .feature-title {
@@ -472,6 +484,11 @@ li {
 
 .why-us-section > * {
   max-width: 550px;
+  font-size: 1rem;
+}
+
+.why-us-description {
+  font-weight: 600;
 }
 
 .developer-img-container {
@@ -494,7 +511,7 @@ li {
 .check-icon {
   width: 24px;
   display: block;
-  margin-bottom: -0.13em;
+  margin-top: 0.08em
 }
 
 .point-heading {
@@ -796,7 +813,6 @@ h4 {
 }
 
 .contact-link {
-  color: #f6e0ff;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -894,10 +910,6 @@ form > button:hover {
 
 .radius-none {
   border-radius: 0;
-}
-
-::placeholder {
-  color: #ffe7ff;
 }
 
 .contact-container {
@@ -1067,7 +1079,7 @@ form > button:hover {
 
 @media (min-width: 768px) {
   section {
-    padding: 2em;
+    padding: 3.5em 2em;
   }
 
   .features-section, .features, .testimonials-section, .testimonials {
@@ -1121,6 +1133,10 @@ form > button:hover {
   .developer-img-container {
     max-height: unset;
   }
+
+  .portfolio-section > ul {
+    gap: 7em;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1156,7 +1172,6 @@ form > button:hover {
     position: absolute;
     top: 50%;
     right: 5%;
-    /* left: 50 */
     transform: translateY(-50%);
     z-index: 30;
     padding: 0;
@@ -1261,7 +1276,7 @@ form > button:hover {
   }
 
   .check-icon {
-    margin-top: 0.1em;
+    margin-top: 0.02em;
   }
 
   .point-text > p {
@@ -1294,6 +1309,10 @@ form > button:hover {
 
   .pricing-card {
     min-height: 390px;
+  }
+
+  .pricing-card-heading {
+    font-size: 1.8rem;
   }
 
   .pricing-card > .get-started-btn-light {
@@ -1333,6 +1352,14 @@ form > button:hover {
 
   .main-footer-text {
     max-width: 600px;
+  }
+
+  .feature-title > h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-title {
+    gap: 1em;
   }
 
   /* About Me Page */
@@ -1472,8 +1499,8 @@ form > button:hover {
     gap: 5em;
   }
 
-  .check-icon {
-    margin-top: 0.4em !important;
+  .target-audience-card > .check-icon {
+    margin-top: 0.45em !important;
   }
 
   .img-holder, .thumbs-up-img  {
@@ -1498,21 +1525,4 @@ form > button:hover {
   .hero-text-about {
     padding-block: 7.5em;
   }
-
-  /* section.expectations-section, .steps-section, .portfolio-section, .pricing-section, .target-audience-section, .why-us-section {
-    min-height: unset;
-    height: 100vh;
-  }
-
-  section.expectations-section, .steps-section {
-    gap: 5em !important;
-  }
-
-  .portfolio-section, .pricing-section, .target-audience-section, section.expectations-section, .steps-section {
-    max-height: 900px;
-  }
-
-  .why-us-section {
-    max-height: 1100px;
-  } */
 }
