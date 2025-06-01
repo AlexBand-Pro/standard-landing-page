@@ -102,7 +102,7 @@
     <header>
       <nav>
         <div class="menu">
-          <a href="index.html" class="logo">
+          <a href="index.html" aria-label="back to home" class="logo">
             <span class="logo-text">
               <span>Zero</span>
               <span>Gravity</span>
@@ -209,7 +209,7 @@
       >
         <h2 id="section-2-heading">What can you expect from me?</h2>
         <ul class="features about-page-features">
-          <li class="feature" data-aos="fade-right">
+          <li class="feature">
             <div class="feature-title about-page-title">
               <h3>Fast, professional delivery</h3>
             </div>
@@ -219,7 +219,7 @@
             </p>
           </li>
 
-          <li class="feature" data-aos="fade-right">
+          <li class="feature">
             <div class="feature-title about-page-title">
               <h3>No unnecessary extras</h3>
             </div>
@@ -229,7 +229,7 @@
             </p>
           </li>
 
-          <li class="feature" data-aos="fade-right">
+          <li class="feature">
             <div class="feature-title about-page-title">
               <h3>Optimized for speed and performance</h3>
             </div>
@@ -239,7 +239,7 @@
             </p>
           </li>
 
-          <li class="feature" data-aos="fade-right">
+          <li class="feature">
             <div class="feature-title about-page-title">
               <h3>Full ownership and support</h3>
             </div>
@@ -249,7 +249,7 @@
             </p>
           </li>
 
-          <li class="feature" data-aos="fade-right">
+          <li class="feature">
             <div class="feature-title about-page-title">
               <h3>Design that earns trust</h3>
             </div>
@@ -259,7 +259,7 @@
             </p>
           </li>
 
-          <li class="feature" data-aos="fade-right">
+          <li class="feature">
             <div class="feature-title about-page-title">
               <h3>Personal communication</h3>
             </div>
@@ -282,10 +282,11 @@
             <img
               class="developer-img remove-radius"
               src="./images/scrimba-certificate-compressed.avif"
-              alt="Alex Band's Front-End Career Path Certificate"
+              alt="Scrimba Front-End Career Path certificate awarded to Alex Band"
               width="566"
               height="755"
-              loading="eager"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="about-main-text">
@@ -304,8 +305,9 @@
               version control (Git/GitHub), working with APIs, debugging, and
               following modern frontend workflows. I focused heavily on
               responsive design, accessibility, and clean, component-based
-              architecture. <br /><br />
-
+              architecture.
+            </p>
+            <p class="why-us-description why-us-description-about-me">
               In addition, I earned Responsive Web Design Certificate, where I
               created and styled multiple web projects using HTML and CSS,
               learning layout techniques with Flexbox and Grid. I also completed
@@ -315,8 +317,9 @@
               while sharpening my problem-solving skills through algorithmic
               challenges. Together, these experiences have given me the
               technical foundation and practical confidence to deliver
-              high-quality front-end solutions. <br /><br />
-
+              high-quality front-end solutions.
+            </p>
+            <p class="why-us-description why-us-description-about-me">
               Overall, I have months and hundreds of hours of experience
               building real-world projects under my belt.
             </p>
@@ -334,11 +337,11 @@
         aria-labelledby="steps-heading"
         role="region"
       >
-        <div class="steps-heading" id="steps-heading">
-          <h2>How does it work?</h2>
+        <div class="steps-heading">
+          <h2 id="steps-heading">How does it work?</h2>
         </div>
 
-        <ul class="features about-page-steps">
+        <ol class="features about-page-steps">
           <li class="feature">
             <div class="feature-title">
               <h3>Step 1</h3>
@@ -405,7 +408,7 @@
               updates and future improvements if needed.
             </p>
           </li>
-        </ul>
+        </ol>
       </section>
 
       <section
@@ -423,7 +426,7 @@
       <a
         href="index.html"
         class="logo-footer"
-        aria-label="Homepage - Zero Gravity Code"
+        aria-label="back to home"
       >
         <span class="logo-footer-text">
           <span>Zero</span>
